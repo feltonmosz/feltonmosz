@@ -41,4 +41,4 @@ Coverage means independent public-source research was completed. It does not cla
 
 ## Body of Works
 
-- [Adobe × Figma switcher prototypes](body-of-works/adobe-figma-switcher/prototypes/index.html)
+- [Adobe × Figma switcher prototypes](body-of-works/competitor-switcher-sprint/adobe-figma-switcher/prototypes/index.html)
