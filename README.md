@@ -24,8 +24,8 @@ Four methods, one standard: every claim carries a source and a date.
 
 ## Receipts
 
-- 95 companies verified in a 2026 market map (founded 2015+, stable, reachable decision-makers)
-- 100 trigger-timed briefs across two 50-company batches
+- 95 companies verified in a 2026 market map (stable and reachable decision-makers)
+- 100 trigger-timed briefs across 100 companies
 - 50 documentation-debt targets with decision-maker, trigger, and fallback route verified
 - 320 company-specific outreach records, each built from public evidence
 - Security findings confirmed by vendors in writing, including a confirmed excessive-permission finding at a Swiss transit platform and seven findings taken into internal review by a European e-commerce platform
