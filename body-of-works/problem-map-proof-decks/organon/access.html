@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Organon access map</title><style>:root{--navy:#0b2a5b;--mag:#c2187a;--grn:#1f9d63;--ink:#14202e}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fbf7fa;color:var(--ink)}
+header{padding:22px;text-align:center}
+.logo{font-size:30px;font-weight:800;letter-spacing:3px;color:var(--navy)}.logo span{color:var(--mag)}
+main{max-width:760px;margin:0 auto;padding:16px 20px 54px}
+h1{font-size:32px;line-height:1.12;color:var(--navy);margin:10px 0}
+.sub{color:#4a3f4d;line-height:1.55}
+.years{display:flex;gap:10px;margin:18px 0}
+.years div{flex:1;text-align:center;font-size:12px}
+.years i{display:block;width:26px;height:26px;margin:0 auto 6px;border-radius:50%;background:#e7d6e3}
+.years div.on i{background:var(--mag)}
+.phase{background:#fff;border:1px solid #ead9e6;border-radius:999px 18px 18px 18px;padding:18px 20px;margin:14px 0}
+.phase h2{margin:0 0 6px;font-size:18px;color:var(--navy)}.phase h2 a{color:var(--navy);text-decoration:none}
+.num{font-size:36px;font-weight:800;color:var(--mag)}
+.btn,button{background:var(--mag);color:#fff;border:0;padding:12px 20px;font-weight:700;cursor:pointer;display:inline-block;text-decoration:none;border-radius:999px}
+.btn:before{content:"● ";font-size:10px}
+input[type=range]{width:100%;accent-color:var(--mag)}
+.out{background:#fdf0f7;border-left:5px solid var(--mag);padding:14px;white-space:pre-line;margin-top:12px}
+.band{background:var(--navy);color:#fff;padding:12px;margin-top:12px;font-size:14px}
+canvas{width:100%;height:220px;background:#fff;border:1px solid #ead9e6;border-radius:14px}
+.small{font-size:12px;color:#7a6b78}</style></head><body><header><div class="logo">ORGANON<span>.</span></div></header><main>
+<h1>reachable care map</h1>
+<section class="phase"><canvas id="cv" width="640" height="440"></canvas>
+<label>Distance to clinic</label><input id="d" type="range" min="0" max="100" value="40">
+<label>Cost pressure</label><input id="c" type="range" min="0" max="100" value="30">
+<label>Supply reliability</label><input id="s" type="range" min="0" max="100" value="70">
+<label>Clinic capacity</label><input id="k" type="range" min="0" max="100" value="60">
+<div class="out" id="out"></div><div class="band">Uncertainty band: certification timing and merger transition can still move access.</div></section>
+<script>function draw(){var cv=document.getElementById('cv'),x=cv.getContext('2d');x.clearRect(0,0,640,440);var d=+document.getElementById('d').value,c=+document.getElementById('c').value,s=+document.getElementById('s').value,k=+document.getElementById('k').value;var T=[[320,60,'#c2187a'],[110,360,'#0b2a5b'],[530,360,'#1f9d63']];var px=320,py=240;var n=Math.round(600+((s+k-d-c)/100)*900);if(n<200)n=200;if(n>2400)n=2400;for(var i=0;i<n;i++){var t=T[Math.floor(Math.random()*3)];px=(px+t[0])/2;py=(py+t[1])/2;x.fillStyle=t[2];x.fillRect(px,py,2,2)}var reach=Math.round((s*0.35+k*0.35+(100-d)*0.15+(100-c)*0.15));document.getElementById('out').textContent='Reachable-care density: '+reach+'%\nPlain English: certified clinics nearby turn a better label into actual demand.'}document.querySelectorAll('input').forEach(function(i){i.addEventListener('input',draw)});draw()</script></main></body></html>
