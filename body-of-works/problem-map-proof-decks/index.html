@@ -30,5 +30,5 @@ main{min-height:100vh;padding:22px 18px 54px;max-width:1180px;margin:0 auto}
 <script>
 const sw=document.getElementById('sw'),gate=document.getElementById('gate'),knob=document.getElementById('knob');
 sw.onclick=()=>{sw.classList.add('on');knob.textContent='1';setTimeout(()=>gate.classList.add('open'),520);};
-function queued(el){const t=document.getElementById('toast');var open=[].slice.call(document.querySelectorAll('a.rec .label')).map(function(x){return x.textContent.replace(' — open','')});t.textContent=el.querySelector('.label').textContent+': case build queued.'+(open.length?' Open records: '+open.join(', ')+'.':'');t.style.display='block';setTimeout(()=>t.style.display='none',2600);}
+function queued(el){const t=document.getElementById('toast');t.textContent=el.querySelector('.label').textContent+': case build queued.';t.style.display='block';setTimeout(()=>t.style.display='none',2600);}
 </script></body></html>
