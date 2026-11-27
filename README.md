@@ -38,3 +38,7 @@ Coverage means independent public-source research was completed. It does not cla
 - PayPal: https://paypal.me/abdulhalimkhaddam
 - Ko-fi: https://ko-fi.com/abdulhalimkhaddam
 - GitHub: https://github.com/feltonmosz
+
+## Body of Works
+
+- [Adobe × Figma switcher prototypes](body-of-works/adobe-figma-switcher/prototypes/index.html)
