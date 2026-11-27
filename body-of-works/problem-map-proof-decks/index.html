@@ -17,7 +17,7 @@ main{min-height:100vh;padding:22px 18px 54px;max-width:1180px;margin:0 auto}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 16px}
 .rec{position:relative;background:none;border:0;color:#fff;text-align:left;cursor:pointer;padding:0;font:inherit;text-decoration:none}
 .cover{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1;border-radius:6px;padding:14px;box-shadow:0 16px 34px rgba(0,0,0,.18);overflow:hidden}
-.logo{width:78%;max-height:46%;object-fit:contain;background:#fff;border-radius:8px;padding:8px}.cover:has(.logo) .mono{display:none}.mono{font-size:34px;font-weight:900;letter-spacing:-.04em}.cname{font-size:15px;font-weight:900;line-height:1.15}
+.logo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;border-radius:6px;padding:12px}.cover:has(.logo){background:#fff!important}.cover:has(.logo) .mono,.cover:has(.logo) .cname{display:none}.mono{font-size:34px;font-weight:900;letter-spacing:-.04em}.cname{font-size:15px;font-weight:900;line-height:1.15}
 .vinyl{position:absolute;z-index:1;right:-18px;top:12px;width:76%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff 0 18%,#111 19% 100%);transition:right .35s}
 .rec:hover .vinyl,.rec:focus .vinyl{right:-30px}
 .label{display:block;margin-top:10px;font-weight:800;font-size:14px;line-height:1.3}
