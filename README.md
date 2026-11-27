@@ -41,4 +41,4 @@ Coverage means independent public-source research was completed. It does not cla
 
 ## Body of Work
 
-- [Competitor Switcher Sprint case files](body-of-work/competitor-switcher-sprint/index.html)
+- [Competitor Switcher Sprint case files](body-of-work/competitor-switcher-sprint/solutions/index.html)
