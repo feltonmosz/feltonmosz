@@ -43,7 +43,7 @@ First pilot: **$99**. Standard unlocks from $199 after preview.
 
 ## One-page proof PDF
 
-[Halim_Docs_Debt_Proof_Page.pdf](./Halim_Docs_Debt_Proof_Page.pdf)
+[Halim_Proof_Page.pdf](./Halim_Proof_Page.pdf)
 
 ## Contact
 
