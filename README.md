@@ -1,32 +1,45 @@
-# Abdul Halim Khaddam — Docs-Debt Proof Cut
+# Abdul Halim Khaddam
 
-Independent Docs & Developer Experience Researcher.
+**Independent Customer-Evidence Researcher**
 
-I audit public documentation surfaces after launches: quickstarts, SDK guides, help centers, changelogs, API references, and MCP/agent docs. The work uses public sources only. No system access, credentials, or customer data are required.
+I turn public customer evidence into short, ranked fix lists — the complaints, reviews, pricing pages, and docs your buyers already read, organized into what to fix first.
 
-## Proof snapshot
+Public sources only. No system access, no credentials, no customer data.
 
-- 95 verified companies in the Fresh100 market map
-- 100 trigger-timed briefs across Trigger50 v1 + v2
-- 50 docs-debt targets with PIC, trigger, and fallback route verified
-- 310 company-specific outreach records
+## What I do
 
-Recent docs-debt coverage includes Mux, Checkly, Supabase, Vercel, WorkOS, Sanity, Clerk, Qdrant, Upstash, Neon, LiveKit, Alpaca, Fingerprint, PostHog, ClickHouse, Veriff, Airbyte, Honeycomb, Cal.com, and Gorgias.
+Four methods, one standard: every claim carries a source and a date.
+
+**1. Competitor Switcher Sprint** — rival customers' own words, turned into switcher sequences and working prototypes of each fix. Coverage: 22 companies.
+[Open the prototypes](https://feltonmosz.github.io/feltonmosz/body-of-works/competitor-switcher-sprint/index.html)
+
+**2. Problem-Map / Proof Decks** — one company's recurring customer problems mapped by theme, with the one pilot-sized fix isolated. Coverage: 93 companies.
+[Open the records](https://feltonmosz.github.io/feltonmosz/body-of-works/problem-map-proof-decks/index.html)
+
+**3. Pay-if-Useful Research Set** — rival angry-customer lead list, pricing-page teardown, and cold-email deliverability audit in three PDFs. You pay only if the set is useful. Coverage: 3 companies.
+[See the set](https://feltonmosz.github.io/feltonmosz/body-of-works/pay-if-useful-set/index.html)
+
+**4. Business Dossiers** — complete company dossiers tailored to the problems that company actually faces. Coverage: 63 companies.
+[See the dossiers](https://feltonmosz.github.io/feltonmosz/body-of-works/business-dossiers/index.html)
+
+## Receipts
+
+- 95 companies verified in a 2026 market map (founded 2015+, stable, reachable decision-makers)
+- 100 trigger-timed briefs across two 50-company batches
+- 50 documentation-debt targets with decision-maker, trigger, and fallback route verified
+- 320 company-specific outreach records, each built from public evidence
+- Security findings confirmed by vendors in writing, including a confirmed excessive-permission finding at a Swiss transit platform and seven findings taken into internal review by a European e-commerce platform
 
 Coverage means independent public-source research was completed. It does not claim purchase, endorsement, or partnership.
 
-## How it works
+## How an engagement works
 
-1. Micro-yes: confirm the surface is worth checking.
-2. Locked preview: counts, dates, categories, and one small teaser.
-3. Paid unlock: ranked mismatch evidence, top-5 rewrite briefs, and a public-question gap map.
-4. Optional retest: monthly refresh only after first paid delivery.
+1. **Micro-yes** — you confirm the surface is worth checking.
+2. **Locked preview** — counts, dates, categories, one small teaser. Proof, not the usable work.
+3. **Paid unlock** — the ranked evidence and fix briefs, delivered in full.
+4. **Optional retest** — monthly refresh, only after a first paid delivery.
 
-## Pricing
-
-- First pilot: $99
-- Standard docs unlock: $199 after preview
-- API timing unlock: $249 when a clean-run sandbox test is possible
+First pilot: **$99**. Standard unlocks from $199 after preview.
 
 ## One-page proof PDF
 
@@ -37,8 +50,5 @@ Coverage means independent public-source research was completed. It does not cla
 - Email: abdulhalimk.career@gmail.com
 - PayPal: https://paypal.me/abdulhalimkhaddam
 - Ko-fi: https://ko-fi.com/abdulhalimkhaddam
-- GitHub: https://github.com/feltonmosz
 
-## Body of Works
-
-- [Adobe × Figma switcher prototypes](body-of-works/competitor-switcher-sprint/adobe-figma-switcher/prototypes/index.html)
+*The evidence is public. The work is knowing which piece of it matters.*
