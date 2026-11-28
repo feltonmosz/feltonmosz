@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Vicinity directory</title><style>*{box-sizing:border-box}body{margin:0;background:#f7f3ec;color:#23201b;font-family:Georgia,serif}
+header{text-align:center;padding:28px 16px 8px}header .lg{font-size:24px;letter-spacing:4px;color:#8a6d3b}
+main{max-width:700px;margin:0 auto;padding:14px 18px 60px}h1{font-size:27px;text-align:center;line-height:1.3}
+.dir{border-top:2px solid #23201b;margin:20px 0}.store{display:flex;justify-content:space-between;border-bottom:1px solid #d8cfc0;padding:15px 4px;font-size:15px}
+.store a{color:#8a6d3b;text-decoration:none;font-weight:700}
+.stores{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:16px 0}
+.stores button{background:#fff;border:2px solid #8a6d3b;color:#8a6d3b;padding:10px 15px;border-radius:999px;cursor:pointer;font-family:inherit;font-size:14px}
+.stores button.on{background:#8a6d3b;color:#fff}
+.status{background:#23201b;color:#f7f3ec;padding:18px;line-height:1.7;text-align:center;border-radius:4px}
+small{color:#8a8071}a.back{color:#8a6d3b}</style></head><body><header><div class='lg'>VICINITY</div></header><main><h1>99.6% occupied.<br>One anchor in administration.</h1><p style='text-align:center'>Directory view for Amy Wotton, GM Brand & Marketing. David Jones affects four stores and ~$34m of rent — contingency decides tenant confidence.</p>
+<div class='stores'><button class='on' onclick='go(0,this)'>anchor store</button><button onclick='go(1,this)'>mini-major</button><button onclick='go(2,this)'>specialty</button></div>
+<div class='status' id='st'>Anchor: contingency sheet ready — replacement plan dated, guidance scenario attached.</div>
+<div class='dir'>
+<div class='store'><span>the portfolio</span><a href='infographic.html'>open →</a></div>
+<div class='store'><span>anchor contingencies</span><a href='fixmap.html'>open →</a></div>
+<div class='store'><span>7-day anchor-confidence sprint</span><a href='sprint.html'>open →</a></div></div>
+<p><small>Sources: Vicinity Oct–Nov 2026. Checked 26 Nov 2026.</small></p>
+<script>var S=['Anchor: contingency sheet ready — replacement plan dated, guidance scenario attached.','Mini-major: remix plan shared, leasing spread protected.','Specialty: footfall plan by precinct, tenant pack delivered.'];function go(i,b){document.querySelectorAll('.stores button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('st').textContent=S[i]}</script></main></body></html>
