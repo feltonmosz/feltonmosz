@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Aspire pause</title><style>*{box-sizing:border-box}body{margin:0;background:#f6fffb;color:#0b241a;font-family:'Helvetica Neue',sans-serif}
+main{max-width:620px;margin:0 auto;padding:24px 18px 60px}h1{font-size:27px;line-height:1.3}
+.ledger{border-left:4px solid #10b981;margin:20px 0 20px 10px;padding-left:22px}
+.stop{position:relative;margin:22px 0}.stop:before{content:'';position:absolute;left:-33px;top:4px;width:18px;height:18px;background:#10b981;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #10b981}
+.stop h2{margin:0 0 4px;font-size:16px}.stop h2 a{color:#047857;text-decoration:none}
+.stamps{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.stamps button{background:#fff;border:2px solid #10b981;color:#047857;padding:10px 14px;border-radius:999px;cursor:pointer;font-size:14px}
+.stamps button.on{background:#10b981;color:#fff}
+.status{background:#064e3b;color:#fff;border-radius:12px;padding:16px;line-height:1.7}
+small{color:#6b8a7a}a.back{color:#047857}</style></head><body><main><h1>AI saves hours.<br>Restrictions still freeze.</h1><p>Ledger view for Joel Leong, Co-founder & CSO. 50,000+ businesses trust the stack — a restriction without a date breaks that trust.</p>
+<div class='stamps'><button class='on' onclick='go(0,this)'>restricted</button><button onclick='go(1,this)'>documents in</button><button onclick='go(2,this)'>released</button></div>
+<div class='status' id='st'>Restricted today. Trigger: address mismatch. Next update: tomorrow, 10:00.</div>
+<div class='ledger'>
+<section class='stop'><h2><a href='infographic.html'>the stack</a></h2><p>50,000+ businesses, 30+ markets.</p></section>
+<section class='stop'><h2><a href='fixmap.html'>where accounts freeze</a></h2><p>Five pause points.</p></section>
+<section class='stop'><h2><a href='sprint.html'>7-day restriction-confidence kit</a></h2><p>$49 start + $50 on delivery.</p></section></div>
+<p><small>Sources: Aspire 2026. Checked 26 Nov 2026.</small></p>
+<script>var S=['Restricted today. Trigger: address mismatch. Next update: tomorrow, 10:00.','Documents received. Review clock running. Next update: in 2 working days.','Released. Funds available. Restriction closed with reason on record.'];function go(i,b){document.querySelectorAll('.stamps button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('st').textContent=S[i]}</script></main></body></html>
