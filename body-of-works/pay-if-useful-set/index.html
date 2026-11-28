@@ -1,38 +1,46 @@
 <!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Pay-if-Useful Set — Independent Customer-Evidence Researcher</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:#faf7f2;color:#14213d}
-.topbar{background:#14213d;color:#faf7f2;display:flex;align-items:center;gap:14px;padding:13px 18px;font-family:'Segoe UI',sans-serif}
-.topbar .lang{font-size:12px;letter-spacing:2px;font-weight:600}
-.topbar .zone{background:#c9a227;color:#14213d;font-weight:800;border-radius:999px;padding:6px 14px;font-size:12px;letter-spacing:1px;margin-left:auto}
-.logobar{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:3px double #14213d}
-.logobar .name{font-size:20px;font-weight:700;line-height:1.15}
-.logobar .sub{font-family:'Segoe UI',sans-serif;font-size:11px;letter-spacing:2px;color:#6b7280;text-transform:uppercase}
-main{max-width:640px;margin:0 auto;padding:22px 16px 70px}
-.lede{font-size:17px;line-height:1.6;margin:4px 0 20px}
-.lede b{color:#14532d}
-.card{border-radius:18px;overflow:hidden;margin:14px 0;display:flex;min-height:190px;cursor:pointer;box-shadow:0 2px 10px rgba(20,33,61,.10)}
-.card .txt{flex:0 0 52%;padding:22px 20px;clip-path:polygon(0 0,100% 0,74% 100%,0 100%);color:#faf7f2}
-.card .txt h2{margin:0 0 8px;font-size:22px}
-.card .txt p{font-family:'Segoe UI',sans-serif;font-size:13px;line-height:1.55;margin:0;opacity:.92}
-.card .txt .price{font-family:'Segoe UI',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;margin-top:12px;color:#f5d76e}
-.card .vis{flex:1;display:flex;align-items:center;justify-content:center;background:#fff}
-.card .vis img{width:96px;height:96px;object-fit:contain}
-.ably .txt{background:#14213d}.budi .txt{background:#3b0764}.tang .txt{background:#14532d}
-.note{font-family:'Segoe UI',sans-serif;font-size:12px;color:#6b7280;text-align:center;margin-top:18px;line-height:1.6}
+*{box-sizing:border-box}body{margin:0;background:#f6f3ee;color:#101828;font-family:Georgia,'Times New Roman',serif}
+.topbar{background:#0b0b0f;color:#f6f3ee;display:flex;justify-content:space-between;gap:16px;padding:11px 16px;font-family:'Segoe UI',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase}
+.topbar span:last-child{color:#f5d76e}
+header{text-align:center;padding:24px 16px 4px}
+.wordmark{font-size:34px;font-weight:700;letter-spacing:6px;line-height:1}
+.sub{font-family:'Segoe UI',sans-serif;font-size:11px;letter-spacing:2.6px;color:#667085;text-transform:uppercase;margin-top:8px}
+main{max-width:680px;margin:0 auto;padding:8px 16px 66px}
+.collections{color:#c0392b;font-size:30px;font-weight:500;letter-spacing:2px;margin:20px 0 8px}
+.lede{font-size:17px;line-height:1.62;margin:0 0 22px}.lede b{color:#14532d}
+.set{background:#fbfaf7;border:1px solid #ece7dd;margin:18px 0;cursor:pointer;overflow:hidden}
+.stage{position:relative;min-height:304px;display:flex;align-items:center;justify-content:center;overflow:hidden;perspective:900px;background:radial-gradient(circle at 50% 38%,#ffffff 0%,#f4f6f8 48%,#e9edf2 100%)}
+.stage::before{content:'';position:absolute;inset:-25%;background:linear-gradient(115deg,transparent 36%,rgba(255,255,255,.62) 49%,transparent 63%);transform:translateX(-78%);animation:shine 7s ease-in-out infinite;z-index:2;pointer-events:none}
+.stage::after{content:'';position:absolute;width:224px;height:34px;border-radius:50%;background:rgba(16,24,40,.18);filter:blur(11px);bottom:44px;animation:shadowPulse 8s ease-in-out infinite}
+.logoWrap{position:relative;z-index:1;width:192px;height:192px;display:flex;align-items:center;justify-content:center;transform-style:preserve-3d;animation:logoLoop 8s ease-in-out infinite}
+.logoWrap img{width:170px;height:170px;object-fit:contain;border-radius:36px;border:1px solid rgba(16,24,40,.08);box-shadow:0 26px 42px rgba(16,24,40,.22),0 5px 12px rgba(16,24,40,.12)}
+.ably .logoWrap{animation-duration:7s}.budi .logoWrap{animation-duration:8.5s}.tang .logoWrap{animation-duration:10s}
+.ably .stage::before{animation-duration:7s}.budi .stage::before{animation-duration:8.5s}.tang .stage::before{animation-duration:10s}
+.name{text-align:center;font-size:25px;font-weight:500;letter-spacing:3px;margin:19px 12px 8px;text-transform:uppercase}
+.desc{font-family:'Segoe UI',sans-serif;text-align:center;color:#475467;font-size:14px;line-height:1.58;margin:0 22px}
+.price{display:block;width:max-content;max-width:calc(100% - 32px);margin:15px auto 22px;background:#101828;color:#f5d76e;font-family:'Segoe UI',sans-serif;font-size:12px;font-weight:800;letter-spacing:1px;padding:9px 14px;border-radius:999px;text-align:center}
+.note{font-family:'Segoe UI',sans-serif;font-size:12px;color:#667085;text-align:center;margin-top:20px;line-height:1.6}
 .paywrap{text-align:center;margin:20px 0 4px}
-.paybtn{display:inline-block;background:#14532d;color:#fff;text-decoration:none;font-family:'Segoe UI',sans-serif;font-weight:800;letter-spacing:.4px;border-radius:999px;padding:16px 28px;box-shadow:0 8px 22px rgba(20,83,45,.24)}
+.paybtn{display:inline-block;background:#e4572e;color:#fff;text-decoration:none;font-family:'Segoe UI',sans-serif;font-size:16px;font-weight:700;border-radius:999px;padding:16px 30px;box-shadow:0 10px 24px rgba(228,87,46,.24)}
 .paybtn:active{transform:translateY(1px)}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#14213d;color:#faf7f2;padding:12px 20px;border-radius:999px;font-family:'Segoe UI',sans-serif;font-size:14px;display:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#101828;color:#f6f3ee;padding:12px 20px;border-radius:999px;font-family:'Segoe UI',sans-serif;font-size:14px;display:none;z-index:5}
+@keyframes logoLoop{0%,100%{transform:translateY(0) scale(1) rotateY(-5deg)}50%{transform:translateY(-9px) scale(1.055) rotateY(5deg)}}
+@keyframes shine{0%,55%{transform:translateX(-78%)}86%,100%{transform:translateX(78%)}}
+@keyframes shadowPulse{0%,100%{transform:scaleX(1);opacity:.58}50%{transform:scaleX(.82);opacity:.4}}
+@media (prefers-reduced-motion:reduce){.logoWrap,.stage::before,.stage::after{animation:none}}
+@media (max-width:430px){.wordmark{font-size:27px;letter-spacing:4px}.collections{font-size:26px}.stage{min-height:264px}.logoWrap{width:162px;height:162px}.logoWrap img{width:144px;height:144px;border-radius:30px}.name{font-size:22px}.stage::after{width:188px;bottom:38px}}
 </style></head><body>
-<div class='topbar'><span class='lang'>CUSTOMER EVIDENCE</span><span class='zone'>PAY IF USEFUL</span></div>
-<div class='logobar'><div><div class='name'>Independent Customer-Evidence Researcher</div><div class='sub'>Public evidence · Ranked fix lists</div></div></div>
+<div class='topbar'><span>Independent research</span><span>Pay if useful</span></div>
+<header><div class='wordmark'>PAY-IF-USEFUL</div><div class='sub'>Customer-evidence research sets</div></header>
 <main>
-<p class='lede'>Three research sets, sent in full. Use one for a week — <b>pay only if it was useful.</b> Each set: the rival's angry customers as a lead list, a pricing-page teardown, and a cold-email deliverability audit.</p>
-<section class='card ably' onclick='toast("Ably")'><div class='txt'><h2>Ably</h2><p>12 Pusher &amp; PubNub switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/ably.png' alt='Ably logo'></div></section>
-<section class='card budi' onclick='toast("Budibase")'><div class='txt'><h2>Budibase</h2><p>12 Retool switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/budibase.png' alt='Budibase logo'></div></section>
-<section class='card tang' onclick='toast("Tangem")'><div class='txt'><h2>Tangem</h2><p>12 Ledger switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/tangem.png' alt='Tangem logo'></div></section>
+<h1 class='collections'>RESEARCH SETS</h1>
+<p class='lede'>Three sets, sent in full. Use one for a week — <b>pay only if it was useful.</b> Each set: the rival's angry customers as a lead list, a pricing-page teardown, and a cold-email deliverability audit.</p>
+<section class='set ably' onclick='toast("Ably")'><div class='stage'><div class='logoWrap'><img src='logos/ably.png' alt='Ably logo'></div></div><h2 class='name'>Ably</h2><p class='desc'>12 Pusher &amp; PubNub switchers, verbatim.<br>Pricing teardown · Deliverability audit</p><span class='price'>US$99 · PAY IF USEFUL</span></section>
+<section class='set budi' onclick='toast("Budibase")'><div class='stage'><div class='logoWrap'><img src='logos/budibase.png' alt='Budibase logo'></div></div><h2 class='name'>Budibase</h2><p class='desc'>12 Retool switchers, verbatim.<br>Pricing teardown · Deliverability audit</p><span class='price'>US$99 · PAY IF USEFUL</span></section>
+<section class='set tang' onclick='toast("Tangem")'><div class='stage'><div class='logoWrap'><img src='logos/tangem.png' alt='Tangem logo'></div></div><h2 class='name'>Tangem</h2><p class='desc'>12 Ledger switchers, verbatim.<br>Pricing teardown · Deliverability audit</p><span class='price'>US$99 · PAY IF USEFUL</span></section>
 <p class='note'>Evidence from public sources only. Nothing to pay until a set earns it.</p>
-<div class='paywrap'><a class='paybtn' href='https://paypal.me/abdulhalimkhaddam' target='_blank' rel='noopener' aria-label='Pay via PayPal if the research was useful'>It earned it — pay US$99</a></div>
+<div class='paywrap'><a class='paybtn' href='https://paypal.me/abdulhalimkhaddam' target='_blank' rel='noopener' aria-label='Pay via PayPal if the research was useful'>It was useful — pay US$99</a></div>
 </main>
 <div class='toast' id='t'></div>
 <script>function toast(c){var t=document.getElementById('t');t.textContent=c+': case build queued.';t.style.display='block';setTimeout(function(){t.style.display='none'},1800)}</script>
