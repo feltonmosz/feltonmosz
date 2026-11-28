@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>PaySauce ladder</title><style>*{box-sizing:border-box}body{margin:0;background:#fff7f2;color:#3a1608;font-family:'Segoe UI',sans-serif}
+main{max-width:660px;margin:0 auto;padding:21px 13px 60px}h1{font-size:27px;line-height:1.3;color:#7a1e12}
+.ladder{margin:21px 0}.rung{padding:13px 21px;margin:8px 0;background:#fff;border:2px solid #e84e2c;border-radius:34px;cursor:pointer}
+.rung:nth-child(2){margin-left:21px}.rung:nth-child(3){margin-left:34px}
+.rung.on{background:#e84e2c;color:#fff;font-weight:700}
+.status{background:#7a1e12;color:#fff;border-radius:21px;padding:21px;line-height:1.7}
+.card{background:#fff;border:2px solid #ffd9cc;border-radius:21px;padding:13px 21px;margin:8px 0}.card h2{margin:0 0 4px;font-size:16px}.card h2 a{color:#e84e2c;text-decoration:none}
+small{color:#9a7a68}a.back{color:#e84e2c}</style></head><body><main><h1>Payroll, sorted.<br>Migration needs confidence.</h1><p>Ladder view for Kelly Harvey, Chief Marketing Officer. ARR NZ$10.1m (+10%) — Australian conversion decides growth.</p>
+<div class='ladder'><div class='rung on' onclick='go(0,this)'>DONE</div><div class='rung' onclick='go(1,this)'>DATE</div><div class='rung' onclick='go(2,this)'>CHECK</div></div>
+<div class='status' id='st'>Done: migration step complete, stated plainly.</div>
+<section class='card'><h2><a href='infographic.html'>the readings</a></h2><p>8,800 customers; Australia 80 → 117.</p></section>
+<section class='card'><h2><a href='ladder.html'>confidence ladder</a></h2><p>Done, Date, Check — every scale.</p></section>
+<section class='card'><h2><a href='fixmap.html'>ladder joins</a></h2><p>Five migration points.</p></section>
+<section class='card'><h2><a href='sprint.html'>7-day migration kit</a></h2><p>$99 pilot ($49 start + $50 delivery).</p></section>
+<section class='card'><h2><a href='rewrites.html'>update copy</a></h2><p>Migration updates, rewritten.</p></section>
+<section class='card'><h2><a href='briefs.html'>switch briefs</a></h2><p>Language teams reuse.</p></section>
+<section class='card'><h2><a href='playbook.html'>migration playbook</a></h2><p>Sorted migrations, kept customers.</p></section>
+<p><small>Sources: PaySauce Oct 2026. Checked 26 Nov 2026.</small></p>
+<script>var S=['Done: migration step complete, stated plainly.','Date: first live pay run dated.','Check: accuracy check attached before go-live.'];function go(i,b){document.querySelectorAll('.rung').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('st').textContent=S[i]}</script></main></body></html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Buk cascade</title><style>*{box-sizing:border-box}body{margin:0;background:#fff;color:#1a1a2e;font-family:'Segoe UI',sans-serif}
+main{max-width:660px;margin:0 auto;padding:24px 16px 60px}h1{font-size:27px;line-height:1.3}
+.disc{width:120px;height:120px;border-radius:50%;background:#e63946;color:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;margin:14px 0}
+.steps{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}.steps button{flex:1;background:#fff;border:2px solid #e63946;color:#e63946;padding:12px 4px;font-weight:700;cursor:pointer;border-radius:10px;font-size:12px}
+.steps button.on{background:#e63946;color:#fff}
+.status{background:#1a1a2e;color:#fff;border-radius:12px;padding:16px;line-height:1.7}
+.card{background:#fff;border:2px solid #f3d9dc;border-radius:16px;padding:15px;margin:10px 0}.card h2{margin:0 0 4px;font-size:16px}.card h2 a{color:#e63946;text-decoration:none}
+small{color:#7a7a8c}a.back{color:#e63946}</style></head><body><main><div class='disc'>buk</div><h1>Primera liquidación.<br>Confidence decides renewal.</h1><p>Cascade view for Teresita Morán, Chief Revenue Officer. BCP “Nóminas con propósito” — first payroll decides trust.</p>
+<div class='steps'><button class='on' onclick='go(0,this)'>CUT-OFF</button><button onclick='go(1,this)'>PREVIEW</button><button onclick='go(2,this)'>APPROVAL</button><button onclick='go(3,this)'>PAYMENT</button></div>
+<div class='status' id='st'>Cut-off: date stated, approver named.</div>
+<section class='card'><h2><a href='infographic.html'>the readings</a></h2><p>1,500 Peru companies (company-reported).</p></section>
+<section class='card'><h2><a href='cascade.html'>cut-off cascade</a></h2><p>Month, week, day — same steps.</p></section>
+<section class='card'><h2><a href='fixmap.html'>cascade joins</a></h2><p>Five payroll points.</p></section>
+<section class='card'><h2><a href='sprint.html'>7-day payroll pack</a></h2><p>$99 pilot ($49 start + $50 delivery).</p></section>
+<section class='card'><h2><a href='rewrites.html'>checklist copy</a></h2><p>First-payroll checklist, rewritten.</p></section>
+<section class='card'><h2><a href='briefs.html'>client briefs</a></h2><p>Language teams reuse.</p></section>
+<section class='card'><h2><a href='playbook.html'>payroll playbook</a></h2><p>First payroll right, renewals follow.</p></section>
+<p><small>Sources: Buk Nov 2026. Checked 26 Nov 2026.</small></p>
+<script>var S=['Cut-off: date stated, approver named.','Preview: liquidation preview before approval.','Approval: Previred/LRE outputs attached.','Payment: paid, late-incident path stated.'];function go(i,b){document.querySelectorAll('.steps button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('st').textContent=S[i]}</script></main></body></html>
