@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>waterfall</title><style>*{box-sizing:border-box}body{margin:0;background:#fbfbff;color:#00018a;font-family:Poppins,Arial,sans-serif}
+main{max-width:700px;margin:0 auto;padding:24px 16px 60px}h1{font-size:28px;line-height:1.3}
+.band{padding:14px 16px;color:#fff;font-weight:700;margin:6px 0}
+.b1{background:#00018a}.b2{background:#3bbae2}.b3{background:#f58220}.b4{background:#f04e53}
+input[type=range]{width:100%;accent-color:#f58220;margin:18px 0}
+.status{background:#00018a;color:#fff;border-radius:12px;padding:16px;line-height:1.7}
+.row{display:flex;justify-content:space-between;border-bottom:2px solid #e0e7ff;padding:14px 2px}
+.row a{color:#f58220;text-decoration:none;font-weight:700}
+small{color:#64748b}a.back{color:#f58220}</style></head><body><main><h1>credit waterfall</h1><div class='band b1' style='width:100%'>FUNDING</div><div class='band b2' style='width:82%'>CO-LENDING</div><div class='band b3' style='width:64%'>STAGE 1 / 2</div><div class='band b4' style='width:46%'>STAGE 3</div><input type='range' id='s3' min='0' max='2' value='2' step='1' oninput='go()'><div class='status' id='st'>Slide the Stage-3 rung: every band re-splits.</div><p><small>Uncertainty: FY26 figures are pro-forma — labelled as such.</small></p><p><a class='back' href='index.html'>← waterfall</a></p><script>var S=['1.09% — FY24 base, growth story intact.','2.49% — H1 FY26 peak, migration explained.','2.20% — FY26, cover 46%, outlook positive.'];function go(){document.getElementById('st').textContent=S[+document.getElementById('s3').value]}</script></main></body></html>

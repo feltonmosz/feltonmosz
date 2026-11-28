@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>ACME PPA clock</title><style>*{box-sizing:border-box}body{margin:0;background:#eef6ff;color:#0c2a4a;font-family:'Segoe UI',sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 60px}h1{font-size:28px;line-height:1.3}
+.split{display:flex;height:34px;border-radius:8px;overflow:hidden;margin:18px 0}
+.signed{background:#0284c7;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.unsigned{background:#fbbf24;color:#3a2a02;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.clock{margin:22px 0}input[type=range]{width:100%;accent-color:#0284c7}
+.status{background:#0c2a4a;color:#fff;border-radius:12px;padding:16px;line-height:1.7}
+.row{display:flex;justify-content:space-between;border-bottom:2px solid #bae6fd;padding:14px 2px}
+.row a{color:#0284c7;text-decoration:none;font-weight:700}
+small{color:#5b7a99}a.back{color:#0284c7}</style></head><body><main><h1>92% PPA-locked.<br>The last 8% needs its story.</h1><p>Clock view for Yogesh Kumar Sanklecha, Chief Commercial Officer. Revenue Rs 1,007 crore (+67.5%) — unsigned PPAs decide the next rerating.</p>
+<div class='split'><div class='signed' style='width:92%'>92% SIGNED</div><div class='unsigned' style='width:8%'>8%</div></div>
+<div class='clock'><input type='range' id='scr' min='0' max='3' value='0' step='1' oninput='go()'></div>
+<div class='status' id='st'>Observed: 8,370 MW contracted. 92% PPA-signed.</div>
+<div class='row'><span>the numbers</span><a href='infographic.html'>open →</a></div>
+<div class='row'><span>unsigned megawatts</span><a href='fixmap.html'>open →</a></div>
+<div class='row'><span>7-day PPA-confidence sprint</span><a href='sprint.html'>open →</a></div>
+<p><small>Sources: ACME Q2 FY27. Checked 26 Nov 2026.</small></p>
+<script>var S=['Observed: 8,370 MW contracted. 92% PPA-signed.','Contracted: NTPC FDRE 400 MW at Rs 4.37/unit.','Build: BESS 5.2 GWh commissioned, peak duty 4.5 hours.','Target: supply from 30 Jun 2028 — labelled target, not observed.'];function go(){document.getElementById('st').textContent=S[+document.getElementById('scr').value]}</script></main></body></html>

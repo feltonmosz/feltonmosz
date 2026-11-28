@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>AnyMind mesh</title><style>*{box-sizing:border-box}body{margin:0;background:#fff;color:#0f1e3d;font-family:'Helvetica Neue',sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 60px}h1{font-size:28px;line-height:1.3}
+.dots{display:flex;gap:8px;margin:14px 0}.dot{width:22px;height:22px;border-radius:50%}
+.toggle{display:flex;gap:8px;margin:16px 0}.toggle button{flex:1;padding:14px;border:3px solid #0f1e3d;background:#fff;font-weight:700;cursor:pointer;font-size:15px;border-radius:10px}
+.toggle button.on{background:#0f1e3d;color:#fff}
+.status{background:#0f1e3d;color:#fff;border-radius:12px;padding:16px;line-height:1.7}
+.node{border:2px solid #e2e8f0;border-radius:14px;padding:15px;margin:10px 0}.node h2{margin:0 0 4px;font-size:16px}.node h2 a{color:#0f1e3d;text-decoration:none}
+small{color:#64748b}a.back{color:#0f1e3d}</style></head><body><main><h1>Record revenue.<br>Profit must convert to cash.</h1><p>Mesh view for Otohiko Kozutsumi, Chief Commercial Officer. Q3 revenue JPY 21.4bn (+43.2%) — the forecast bridge decides Q4 confidence.</p><div class='dots'><div class='dot' style='background:#e63946'></div><div class='dot' style='background:#2563eb'></div><div class='dot' style='background:#22c55e'></div><div class='dot' style='background:#facc15'></div></div>
+<div class='toggle'><button class='on' onclick='go(0,this)'>growth view</button><button onclick='go(1,this)'>cash view</button></div>
+<div class='status' id='st'>Growth: Enterprise ~80% of revenue. Q3 at 63% of FY forecast.</div>
+<section class='node'><h2><a href='infographic.html'>the numbers</a></h2><p>JPY 21.4bn revenue, JPY 886m operating profit.</p></section>
+<section class='node'><h2><a href='fixmap.html'>mesh seams</a></h2><p>Five joins to strengthen.</p></section>
+<section class='node'><h2><a href='sprint.html'>7-day profit-confidence sprint</a></h2><p>$49 upfront + $50 on delivery.</p></section>
+<p><small>Sources: AnyMind Q3 FY2026. Checked 26 Nov 2026.</small></p>
+<script>var S=['Growth: Enterprise ~80% of revenue. Q3 at 63% of FY forecast.','Cash: conversion note ties profit to collections, dated by segment.'];function go(i,b){document.querySelectorAll('.toggle button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('st').textContent=S[i]}</script></main></body></html>
