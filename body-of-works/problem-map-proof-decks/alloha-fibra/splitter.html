@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>splitter</title><style>*{box-sizing:border-box}body{margin:0;background:#f2fbf5;color:#06281a;font-family:'Segoe UI',sans-serif}
+main{max-width:640px;margin:0 auto;padding:24px 16px 60px}h1{font-size:27px;line-height:1.3;color:#065f46;text-transform:uppercase}
+.plus{font-size:64px;font-weight:800;color:#22c55e;line-height:1}
+.receipt{background:#fff;border:2px dashed #22c55e;border-radius:12px;padding:18px;font-family:monospace;line-height:2;white-space:pre-line;margin:16px 0}
+.split{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}.split button{flex:1;background:#fff;border:2px solid #16a34a;color:#065f46;padding:11px 4px;font-weight:700;cursor:pointer;border-radius:8px;font-size:12px}
+.split button.on{background:#16a34a;color:#fff}
+.card{background:#fff;border:2px solid #bbf7d0;border-radius:16px;padding:15px;margin:10px 0}.card h2{margin:0 0 4px;font-size:16px}.card h2 a{color:#16a34a;text-decoration:none}
+small{color:#5f7a6a}a.back{color:#16a34a}</style></head><body><main><h1>splitter receipt</h1><div class='receipt' id='rc'>BILL → LINES → PROOF
+SAME RECEIPT, SUBDIVIDED</div><div class='split'><button class='on' onclick='go(0,this)'>BILL</button><button onclick='go(1,this)'>LINES</button><button onclick='go(2,this)'>PROOF</button></div><p><small>Uncertainty: technician verdicts move fines — receipt states the path.</small></p><p><a class='back' href='index.html'>← receipt</a></p><script>var S=['BILL: total with promo honored','LINES: each charge explained','PROOF: protocol + dates attached'];function go(i,b){document.querySelectorAll('.split button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('rc').textContent=S[i]}</script></main></body></html>
