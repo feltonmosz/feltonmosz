@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Ably — Pay-if-Useful Evidence Set</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#050505;color:#f5f5f4;font-family:'Segoe UI',Arial,sans-serif}
+a{color:inherit}.topbar{background:#000;border-bottom:1px solid #262626;display:flex;justify-content:space-between;gap:14px;padding:11px 16px;font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.topbar span:last-child{color:#ff4d2e}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 0%,#2a0d08 0%,#0a0a0a 46%,#050505 100%);padding:34px 16px 30px;text-align:center;border-bottom:1px solid #262626}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 2px,transparent 2px 7px);pointer-events:none}
+.logoStage{position:relative;width:190px;height:190px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;perspective:900px}
+.logoStage::after{content:'';position:absolute;width:170px;height:26px;border-radius:50%;background:rgba(255,77,46,.28);filter:blur(14px);bottom:8px;animation:shadowPulse 7s ease-in-out infinite}
+.logoStage img{position:relative;z-index:1;width:164px;height:164px;object-fit:contain;border-radius:36px;box-shadow:0 28px 48px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08);animation:logoLoop 7s ease-in-out infinite}
+.kicker{position:relative;color:#ff4d2e;font-size:12px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+h1{position:relative;font-family:Georgia,'Times New Roman',serif;font-size:42px;line-height:1.08;font-weight:500;letter-spacing:1px;margin:12px auto;max-width:720px}
+.lede{position:relative;color:#d6d3d1;font-size:17px;line-height:1.65;max-width:680px;margin:0 auto}
+.ctaRow{position:relative;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.cta{display:inline-block;text-decoration:none;border-radius:999px;padding:14px 22px;font-weight:800;font-size:14px}
+.cta.primary{background:#ff4d2e;color:#fff}.cta.ghost{border:1px solid #525252;color:#f5f5f4}
+main{max-width:920px;margin:0 auto;padding:26px 16px 70px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:6px 0 30px}
+.metric{border:1px solid #262626;background:#0a0a0a;padding:16px 12px;text-align:center}.metric b{display:block;font-family:Georgia,serif;font-size:27px;font-weight:500;color:#fff}.metric span{display:block;color:#a8a29e;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:5px;line-height:1.45}
+.sectionTitle{font-family:Georgia,serif;font-size:30px;font-weight:500;letter-spacing:2px;text-transform:uppercase;margin:34px 0 8px}.sectionTitle em{color:#ff4d2e;font-style:normal}
+.sectionSub{color:#d6d3d1;line-height:1.65;margin:0 0 18px;max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{border:1px solid #262626;background:linear-gradient(180deg,#111,#070707);padding:20px;min-height:250px}.card .tag{color:#ff4d2e;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.card h3{font-family:Georgia,serif;font-size:24px;font-weight:500;margin:10px 0}.card p{color:#d6d3d1;line-height:1.62;font-size:14px}.card ul{color:#d6d3d1;line-height:1.6;font-size:14px;padding-left:18px}.card li{margin:7px 0}
+.quote{border-left:3px solid #ff4d2e;padding:4px 0 4px 14px;color:#f5f5f4;font-size:15px;line-height:1.65;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}th,td{border:1px solid #262626;padding:11px;text-align:left}th{background:#171717;color:#fff}td{color:#d6d3d1}.win{color:#86efac;font-weight:800}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{border:1px solid #262626;background:#0a0a0a;padding:20px}.panel h3{font-family:Georgia,serif;font-size:23px;font-weight:500;margin:0 0 10px}.panel p,.panel li{color:#d6d3d1;line-height:1.62;font-size:14px}.panel ul{padding-left:18px}.panel li{margin:7px 0}
+.confidence{margin-top:34px;border:1px solid #3f1d16;background:radial-gradient(circle at 50% 0%,#2a0d08,#090909 62%);padding:28px 20px;text-align:center}.confidence h2{font-family:Georgia,serif;font-size:30px;font-weight:500;margin:0 0 10px}.confidence p{color:#d6d3d1;line-height:1.65;max-width:680px;margin:0 auto 18px}
+.paybtn{display:inline-block;background:#ff4d2e;color:#fff;text-decoration:none;font-weight:900;border-radius:999px;padding:16px 28px}
+.foot{color:#78716c;font-size:12px;line-height:1.7;text-align:center;margin-top:26px}.back{display:inline-block;color:#ff4d2e;text-decoration:none;font-weight:800;margin-top:10px}
+@keyframes logoLoop{0%,100%{transform:translateY(0) scale(1) rotateY(-5deg)}50%{transform:translateY(-9px) scale(1.055) rotateY(5deg)}}
+@keyframes shadowPulse{0%,100%{transform:scaleX(1);opacity:.55}50%{transform:scaleX(.8);opacity:.38}}
+@media (prefers-reduced-motion:reduce){.logoStage img,.logoStage::after{animation:none}}
+@media (max-width:760px){h1{font-size:34px}.metrics{grid-template-columns:repeat(2,1fr)}.grid,.split{grid-template-columns:1fr}.sectionTitle{font-size:25px}}
+</style></head><body>
+<div class='topbar'><span>MAU relaunch · 5 Nov 2026</span><span>Pay if useful</span></div>
+<section class='hero'>
+<div class='logoStage'><img src='../logos/ably.png' alt='Ably logo'></div>
+<div class='kicker'>Ably evidence set</div>
+<h1>Realtime that just works.<br>Pricing that must be seen.</h1>
+<p class='lede'>A pay-if-useful research set for Affrica Cook, Head of Sales, and Faye McClenahan, Head of Marketing: rival switchers ready to move, a pricing page teardown, and an email trust audit.</p>
+<div class='ctaRow'><a class='cta primary' href='#set'>Use the set for a week</a><a class='cta ghost' href='https://paypal.me/abdulhalimkhaddam' target='_blank' rel='noopener'>It was useful — pay US$99</a></div>
+</section>
+<main>
+<div class='metrics'><div class='metric'><b>12</b><span>Pusher / PubNub switchers</span></div><div class='metric'><b>12</b><span>Pricing findings</span></div><div class='metric'><b>2 / 4</b><span>Email pass / partial</span></div><div class='metric'><b>$0.05</b><span>Flat MAU overage</span></div></div>
+
+<h2 class='sectionTitle'>The <em>set</em></h2>
+<p class='sectionSub'>Ably sells realtime infrastructure — Pub/Sub, Chat, LiveSync, Spaces and AI Transport — so teams can ship live updates without running WebSocket systems themselves. The evidence below turns that strength into pipeline, pricing clarity and inbox trust.</p>
+<div class='grid' id='set'>
+<article class='card'><div class='tag'>01 · Switcher pipeline</div><h3>Buyers already angry</h3><p>Twelve public Pusher and PubNub complainers, each with the reason Ably wins them.</p><div class='quote'>“It's been consistently hard to understand what drives our transaction volume.”</div><p>Greg G., Principal Software Engineer, is the hottest lead: enterprise billing opacity, June 2026.</p></article>
+<article class='card'><div class='tag'>02 · Pricing visibility</div><h3>The relaunch is hidden</h3><p>MAU pricing launched 5 Nov 2026, but comparison pages still sell the old three-meter Ably.</p><ul><li>Print dollar prices on the cards.</li><li>Close the $29 → $349 cliff.</li><li>Say the gentle overage out loud.</li></ul></article>
+<article class='card'><div class='tag'>03 · Email trust</div><h3>Policy gaps, not plumbing</h3><p>DNS audit: 2 pass, 4 partial, 0 fail. Google and SendGrid sign properly; HubSpot does not.</p><ul><li>Free fix: add HubSpot DKIM.</li><li>Then DMARC reject + SPF hard fail.</li><li>Protect the root with a sending subdomain.</li></ul></article>
+</div>
+
+<h2 class='sectionTitle'>Switcher <em>pattern</em></h2>
+<p class='sectionSub'>Two rival failures point to one Ably sentence: one meter, monthly active users, with flat overage and no throttling.</p>
+<div class='split'>
+<div class='panel'><h3>Pusher: the peak trap</h3><p>Plans must cover the busiest 60 seconds of the month. Idle tabs count. One spike can lift a bill for the whole month, and new connections are refused over the ceiling.</p><ul><li>0/5 review: “Unable to cancel my account.”</li><li>Deprecated Chat forced a rebuild from scratch.</li><li>Message-heavy audit apps pay the most.</li></ul></div>
+<div class='panel'><h3>PubNub: the blind bill</h3><p>Buyers say usage is hard to debug and cost “may rapidly sneak up on you.” Two June 2026 complaints repeat the same billing-opacity pattern.</p><ul><li>Presence events billed but not consumed.</li><li>Cost rises without a clear driver.</li><li>Price is the only objection in one review.</li></ul></div>
+</div>
+
+<h2 class='sectionTitle'>Pricing <em>teardown</em></h2>
+<p class='sectionSub'>Read live 25 Nov 2026. Ably already fixed the hard part — one MAU meter. The page still hides the win.</p>
+<table><tr><th></th><th>Ably Pro</th><th>Pusher Startup</th><th>PubNub Starter</th></tr><tr><td>Headline</td><td class='win'>$29/mo · 1K MAU</td><td>$49/mo · 500 conn</td><td>$98/mo · 1,000 MAU</td></tr><tr><td>Free tier</td><td class='win'>500 MAU</td><td>100 conn</td><td>200 MAU</td></tr><tr><td>Overage</td><td class='win'>$0.05/MAU · never throttled</td><td>Connections refused</td><td>Heavy users count extra</td></tr></table>
+<div class='split'>
+<div class='panel'><h3>Fix first</h3><ul><li>Correct stale comparison pages; publish Ably's own cost page.</li><li>Add a $99–149 tier or unbundle Business features.</li><li>Put “$0.05 per extra user — your app never stops” on each card.</li></ul></div>
+<div class='panel'><h3>Also found</h3><ul><li>No dollar prices on the pricing cards.</li><li>Monthly billing exists but is hidden.</li><li>MAU counting needs the clientId pattern on-page.</li><li>ISO 27001 row concedes ground to Pusher.</li></ul></div>
+</div>
+
+<h2 class='sectionTitle'>Product <em>fit</em></h2>
+<p class='sectionSub'>The set maps each switcher pain to the Ably product that answers it.</p>
+<div class='grid'>
+<article class='card'><div class='tag'>Pub/Sub</div><h3>For Pusher migrants</h3><p>Pusher clients can connect with familiar libraries, shrinking the migration buyers fear.</p></article>
+<article class='card'><div class='tag'>Chat</div><h3>For rebuilt chat</h3><p>Pusher deprecated Chat and forced rebuilds. Ably Chat is the direct landing place.</p></article>
+<article class='card'><div class='tag'>LiveSync · Spaces · AI</div><h3>For scale</h3><p>Collaboration, synced state and AI agent sessions need delivery guarantees, presence and recovery.</p></article>
+</div>
+
+<h2 class='sectionTitle'>Seven-day <em>use</em></h2>
+<div class='split'>
+<div class='panel'><h3>Sales week</h3><ul><li>Day 1: work Greg G. and the June billing-opacity pattern.</li><li>Day 2: send the peak-trap comparison to Pusher accounts.</li><li>Day 3: target the cancelled-Chat rebuild story.</li></ul></div>
+<div class='panel'><h3>Marketing week</h3><ul><li>Day 1: publish prices and the overage line.</li><li>Day 2: correct stale comparison data.</li><li>Day 3: add HubSpot DKIM, then harden DMARC/SPF.</li></ul></div>
+</div>
+
+<section class='confidence'><h2>Confidence comes standard</h2><p>Use the set for a week. Pay US$99 only if it was useful. The HubSpot DKIM fix is already given free: connect the sending domain in HubSpot, add the two DKIM records to DNS, then confirm <b>dkim=pass</b>.</p><a class='paybtn' href='https://paypal.me/abdulhalimkhaddam' target='_blank' rel='noopener'>It was useful — pay US$99</a></section>
+<p class='foot'>Sources checked 25 Nov 2026: Ably pricing and docs, Pusher and PubNub pricing, G2 public reviews, dev.to, public DNS. Public sources only.<br><a class='back' href='../index.html'>← Pay-if-Useful sets</a></p>
+</main>
+</body></html>

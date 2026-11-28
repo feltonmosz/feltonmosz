@@ -10,6 +10,7 @@ main{max-width:680px;margin:0 auto;padding:8px 16px 66px}
 .collections{color:#c0392b;font-size:30px;font-weight:500;letter-spacing:2px;margin:20px 0 8px}
 .lede{font-size:17px;line-height:1.62;margin:0 0 22px}.lede b{color:#14532d}
 .set{background:#fbfaf7;border:1px solid #ece7dd;margin:18px 0;cursor:pointer;overflow:hidden}
+a.set{display:block;text-decoration:none;color:inherit}
 .stage{position:relative;min-height:304px;display:flex;align-items:center;justify-content:center;overflow:hidden;perspective:900px;background:radial-gradient(circle at 50% 38%,#ffffff 0%,#f4f6f8 48%,#e9edf2 100%)}
 .stage::before{content:'';position:absolute;inset:-25%;background:linear-gradient(115deg,transparent 36%,rgba(255,255,255,.62) 49%,transparent 63%);transform:translateX(-78%);animation:shine 7s ease-in-out infinite;z-index:2;pointer-events:none}
 .stage::after{content:'';position:absolute;width:224px;height:34px;border-radius:50%;background:rgba(16,24,40,.18);filter:blur(11px);bottom:44px;animation:shadowPulse 8s ease-in-out infinite}
@@ -36,7 +37,7 @@ main{max-width:680px;margin:0 auto;padding:8px 16px 66px}
 <main>
 <h1 class='collections'>RESEARCH SETS</h1>
 <p class='lede'>Three sets, sent in full. Use one for a week — <b>pay only if it was useful.</b> Each set: the rival's angry customers as a lead list, a pricing-page teardown, and a cold-email deliverability audit.</p>
-<section class='set ably' onclick='toast("Ably")'><div class='stage'><div class='logoWrap'><img src='logos/ably.png' alt='Ably logo'></div></div><h2 class='name'>Ably</h2><p class='desc'>12 Pusher &amp; PubNub switchers, verbatim.<br>Pricing teardown · Deliverability audit</p><span class='price'>US$99 · PAY IF USEFUL</span></section>
+<a class='set ably' href='ably/index.html'><div class='stage'><div class='logoWrap'><img src='logos/ably.png' alt='Ably logo'></div></div><h2 class='name'>Ably</h2><p class='desc'>12 Pusher &amp; PubNub switchers, verbatim.<br>Pricing teardown · Deliverability audit</p><span class='price'>US$99 · PAY IF USEFUL</span></a>
 <section class='set budi' onclick='toast("Budibase")'><div class='stage'><div class='logoWrap'><img src='logos/budibase.png' alt='Budibase logo'></div></div><h2 class='name'>Budibase</h2><p class='desc'>12 Retool switchers, verbatim.<br>Pricing teardown · Deliverability audit</p><span class='price'>US$99 · PAY IF USEFUL</span></section>
 <section class='set tang' onclick='toast("Tangem")'><div class='stage'><div class='logoWrap'><img src='logos/tangem.png' alt='Tangem logo'></div></div><h2 class='name'>Tangem</h2><p class='desc'>12 Ledger switchers, verbatim.<br>Pricing teardown · Deliverability audit</p><span class='price'>US$99 · PAY IF USEFUL</span></section>
 <p class='note'>Evidence from public sources only. Nothing to pay until a set earns it.</p>
