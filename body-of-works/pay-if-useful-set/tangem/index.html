@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Tangem — Pay-if-Useful Evidence Set</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0c0f0d;color:#f4f7f4;font-family:'Segoe UI',Arial,sans-serif}
+.topbar{display:flex;justify-content:space-between;gap:14px;padding:12px 16px;border-bottom:1px solid #1f2a22;font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.topbar span:last-child{color:#34d399}
+.hero{max-width:980px;margin:0 auto;padding:30px 16px 8px;text-align:center}
+.cardStack{position:relative;width:min(430px,88vw);aspect-ratio:1.586;margin:8px auto 24px}
+.cardStack::before,.cardStack::after{content:'';position:absolute;inset:0;border-radius:22px;border:1px solid #2b3a2f;background:#111713}
+.cardStack::before{transform:rotate(-5deg) translate(-10px,8px);opacity:.55}
+.cardStack::after{transform:rotate(4deg) translate(10px,6px);opacity:.75}
+.mainCard{position:absolute;inset:0;border-radius:22px;background:linear-gradient(145deg,#ffffff,#dfe7df);color:#0c0f0d;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 30px 60px rgba(0,0,0,.5);animation:cardLoop 9s ease-in-out infinite;z-index:1;padding:18px}
+.mainCard img{width:118px;height:118px;border-radius:26px;object-fit:contain}
+.mainCard b{letter-spacing:4px;margin-top:12px}.mainCard span{color:#3f5546;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;margin-top:5px}
+.kicker{color:#34d399;font-size:11px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:42px;line-height:1.1;font-weight:500;margin:12px auto;max-width:760px}
+.lede{color:#cbd5cb;line-height:1.68;font-size:16px;max-width:700px;margin:0 auto}
+main{max-width:980px;margin:0 auto;padding:20px 16px 70px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 26px}.metric{border:1px solid #223028;background:#101613;border-radius:16px;padding:15px;text-align:center}.metric b{display:block;font-family:Georgia,serif;font-size:26px;font-weight:500}.metric span{display:block;color:#9fb3a4;font-size:11px;letter-spacing:1.3px;text-transform:uppercase;margin-top:5px;line-height:1.45}
+.layer{position:relative;border:1px solid #223028;background:#101613;border-radius:22px;padding:24px;margin:16px 0;overflow:hidden}
+.layer::before{content:'';position:absolute;right:-70px;top:-70px;width:190px;height:190px;border:1px solid #223028;border-radius:28px;transform:rotate(12deg);opacity:.8}
+.layer::after{content:'';position:absolute;right:-34px;top:-34px;width:118px;height:118px;border:1px solid #2b3a2f;border-radius:20px;transform:rotate(12deg);opacity:.8}
+.tag{position:relative;color:#34d399;font-size:11px;font-weight:900;letter-spacing:2.4px;text-transform:uppercase;z-index:1}
+h2{position:relative;font-family:Georgia,serif;font-size:30px;font-weight:500;margin:9px 0;z-index:1}
+.layer p,.layer li{position:relative;color:#cbd5cb;line-height:1.65;font-size:14px;z-index:1}.layer ul{position:relative;padding-left:18px;z-index:1}.layer li{margin:7px 0}
+.quote{position:relative;border-left:3px solid #34d399;padding:4px 0 4px 14px;font-size:16px;line-height:1.6;margin:14px 0;z-index:1}
+.cost{background:#f4f7f4;color:#0c0f0d;border-radius:18px;padding:20px;margin-top:16px;position:relative;z-index:1}.cost h3{margin:0 0 8px}.cost label{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#3f5546}.cost input{width:100%;accent-color:#059669}.bars{display:grid;gap:10px;margin-top:14px}.barRow{display:grid;grid-template-columns:92px 1fr 84px;gap:10px;align-items:center;font-size:13px}.bar{height:14px;background:#dfe7df;border-radius:999px;overflow:hidden}.fill{height:100%;border-radius:999px}.ledgerFill{background:#111713}.tangemFill{background:#059669}
+.confidence{border:1px solid #23402f;background:radial-gradient(circle at 50% 0%,#123524,#0c0f0d 64%);border-radius:22px;padding:28px 20px;text-align:center;margin-top:22px}.confidence h2{margin-top:0}.confidence p{color:#cbd5cb;line-height:1.68;max-width:680px;margin:0 auto 17px}
+.paybtn{display:inline-block;background:#34d399;color:#062015;text-decoration:none;font-weight:900;border-radius:999px;padding:16px 28px}
+.foot{color:#7d8f83;font-size:12px;line-height:1.7;text-align:center;margin-top:24px}.back{color:#34d399;font-weight:900;text-decoration:none}
+@keyframes cardLoop{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(1deg)}}
+@media (prefers-reduced-motion:reduce){.mainCard{animation:none}}
+@media (max-width:760px){h1{font-size:33px}.metrics{grid-template-columns:repeat(2,1fr)}h2{font-size:25px}.barRow{grid-template-columns:76px 1fr 72px}}
+</style></head><body>
+<div class='topbar'><span>No seed · No subscription</span><span>Pay if useful</span></div>
+<section class='hero'>
+<div class='cardStack'><div class='mainCard'><img src='../logos/tangem.png' alt='Tangem logo'><b>TANGEM</b><span>Backup included</span></div></div>
+<div class='kicker'>Tangem evidence set</div>
+<h1>Trust left Ledger.<br>Backup should not be a subscription.</h1>
+<p class='lede'>A pay-if-useful research set for Elena Intse, VP of Sales, and Diana Dutova, Head of Ecommerce: twelve Ledger switchers, a pricing teardown, and an email trust audit.</p>
+</section>
+<main>
+<div class='metrics'><div class='metric'><b>3.2/5</b><span>Ledger Trustpilot</span></div><div class='metric'><b>$500</b><span>Recover · 5 years</span></div><div class='metric'><b>$10</b><span>Tangem third card</span></div><div class='metric'><b>4 / 2</b><span>Email pass / partial</span></div></div>
+
+<section class='layer'><div class='tag'>Layer 01 · Trust</div><h2>The seed can leave the device now?</h2>
+<div class='quote'>“So the seed can leave the device now?”</div>
+<p>CZ's May 2023 sentence broke Ledger's core promise. The pattern is trust, not price: Recover, the 2020 customer-data breach, and fresh November 2026 1-star reviews still shopping for an exit.</p>
+<ul><li>Six Recover-backlash voices: seed export, KYC recovery, third-party shards.</li><li>Six fresh Trustpilot reviews: hacks, breach fallout, fear after spy-chip implants.</li><li>Tangem's answer: seedless by design, keys stay in the EAL6+ chip, backup is physical cards.</li></ul></section>
+
+<section class='layer'><div class='tag'>Layer 02 · Cost</div><h2>$500 against $10</h2>
+<p>Ledger Recover costs $99.99 a year, forever. Tangem's third card costs $10 once. A complete 3-card Tangem set is $69.90 — cheaper than Ledger's $79 Nano S Plus before backup is added.</p>
+<div class='cost'><h3>Five-year cost, made visible</h3><label>Years: <span id='yVal'>5</span></label><input id='years' type='range' min='1' max='10' value='5'><div class='bars'><div class='barRow'><span>Ledger</span><div class='bar'><div class='fill ledgerFill' id='ledgerBar'></div></div><b id='ledgerCost'>$579</b></div><div class='barRow'><span>Tangem</span><div class='bar'><div class='fill tangemFill' id='tangemBar'></div></div><b>$69.90</b></div></div><p id='costNote'>Ledger: $79 device + Recover each year. Tangem: one set, backup included.</p></div>
+<ul><li>Show dollar prices on the pricing page itself.</li><li>Say “a third card, a full backup, for $10.”</li><li>Two Tangem choices against Ledger's five-device lineup.</li></ul></section>
+
+<section class='layer'><div class='tag'>Layer 03 · Email</div><h2>Strong policy, one unsigned sender</h2>
+<p>SPF hard fail, DMARC full reject, clean blacklists. Mailgun is authorised in SPF but has no DKIM signature — under p=reject, a forwarded Mailgun message can fail outright.</p>
+<ul><li><b>Free fix:</b> publish Mailgun DKIM — about fifteen minutes in the console.</li><li><b>Then:</b> isolate bulk mail on a dedicated sending subdomain.</li><li>Google and SendGrid already sign; Mailgun is the only gap.</li></ul></section>
+
+<section class='confidence'><h2>Use it for a week</h2><p>Lead with the $500-versus-$10 backup math, reach the fresh 1-star switchers while they are still shopping, and publish Mailgun DKIM. Pay US$99 only if the set was useful.</p><a class='paybtn' href='https://paypal.me/abdulhalimkhaddam' target='_blank' rel='noopener'>It was useful — pay US$99</a></section>
+<p class='foot'>Sources checked 25 Nov 2026: Tangem, Ledger and Trezor pricing; public X/Reddit posts; Trustpilot reviews; public DNS.<br><a class='back' href='../index.html'>← Pay-if-Useful sets</a></p>
+</main>
+<script>function cost(){var y=+document.getElementById('years').value;document.getElementById('yVal').textContent=y;var ledger=79+99.99*y;document.getElementById('ledgerCost').textContent='$'+Math.round(ledger);document.getElementById('ledgerBar').style.width='100%';document.getElementById('tangemBar').style.width=Math.max(8,(69.9/ledger)*100)+'%';document.getElementById('costNote').textContent='Over '+y+' year'+(y>1?'s':'')+': Ledger backup keeps billing. Tangem stays one payment.'}document.getElementById('years').addEventListener('input',cost);cost();</script>
+</body></html>
