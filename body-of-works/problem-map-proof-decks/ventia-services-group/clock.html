@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>clock</title><style>*{box-sizing:border-box}body{margin:0;background:#f4faf6;color:#0b2e1f;font-family:'Helvetica Neue',sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 60px}h1{font-size:28px;line-height:1.3;text-align:center}
+.venn{display:flex;justify-content:center;margin:24px 0}
+.circ{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;cursor:pointer;text-align:center;padding:10px;font-size:14px}
+.c1{background:rgba(11,94,59,.85);color:#fff;margin-right:-40px}.c2{background:rgba(37,99,235,.75);color:#fff}.c3{background:rgba(134,239,172,.9);color:#0b2e1f;margin-left:-40px}
+.status{background:#0b5e3b;color:#fff;border-radius:14px;padding:18px;line-height:1.7;text-align:center}
+.row{display:flex;justify-content:space-between;border-bottom:2px solid #cfe8d8;padding:14px 4px;font-size:15px}
+.row a{color:#0b5e3b;text-decoration:none;font-weight:700}
+small{color:#6b8a76}a.back{color:#0b5e3b}</style></head><body><main><h1>wait clock</h1><div class='venn'><div class='circ c1' onclick='go(0)'>URGENT</div><div class='circ c2' onclick='go(1)'>STANDARD</div><div class='circ c3' onclick='go(2)'>PLANNED</div></div><div class='status' id='st'>Median waits published by region and urgency.</div><p><small>Uncertainty: parts supply can still move a job — the date moves with a message.</small></p><p><a class='back' href='index.html'>← intersection</a></p><script>var S=['Urgent: median wait published, owner named.','Standard: status updated at every handoff.','Planned: oldest jobs listed with dates.'];function go(i){document.getElementById('st').textContent=S[i]}</script></main></body></html>
