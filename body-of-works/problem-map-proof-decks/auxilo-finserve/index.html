@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Auxilo ladder</title><style>*{box-sizing:border-box}body{margin:0;background:#010b2c;color:#f3d8be;font-family:'Segoe UI',sans-serif}
+main{max-width:700px;margin:0 auto;padding:24px 16px 60px}h1{font-size:28px;line-height:1.3;color:#fff}
+.rung{margin:10px 0;padding:15px;background:#0a1a45;border-left:6px solid #f47226}
+.rung:nth-child(2){margin-left:22px}.rung:nth-child(3){margin-left:44px}.rung:nth-child(4){margin-left:66px}
+.rung h2{margin:0 0 4px;font-size:16px}.rung h2 a{color:#ffb27a;text-decoration:none}
+.steps{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}.steps button{background:#0a1a45;color:#ffb27a;border:2px solid #f47226;padding:10px 14px;border-radius:8px;cursor:pointer}
+.steps button.on{background:#f47226;color:#1a0d02;font-weight:700}
+.status{background:#f47226;color:#1a0d02;padding:16px;font-weight:700;line-height:1.7;border-radius:8px}
+small{color:#8d9ab8}a.back{color:#ffb27a}</style></head><body><main><h1>The next level beckons.<br>Seasoning decides the climb.</h1><p>Ladder view for Benoy Joseph, Head – Marketing. AUM Rs 5,051 crore, Stage 3 just 0.37% — 75% of overseas loans sit in moratorium. The ladder must be explained.</p>
+<div class='steps'><button class='on' onclick='go(0,this)'>moratorium</button><button onclick='go(1,this)'>EMI starts</button><button onclick='go(2,this)'>seasoned</button></div>
+<div class='status' id='st'>Moratorium cohort: principal paused, interest tracked. Seasoning explainer attached.</div>
+<section class='rung'><h2><a href='infographic.html'>the readings</a></h2><p>PAT Rs 117 crore, CAR 29.41%.</p></section>
+<section class='rung'><h2><a href='fixmap.html'>ladder rungs</a></h2><p>Five seasoning points.</p></section>
+<section class='rung'><h2><a href='sprint.html'>7-day ecosystem sprint</a></h2><p>$49 upfront + $50 on delivery.</p></section>
+<p><small>Sources: Auxilo FY26. Checked 26 Nov 2026.</small></p>
+<script>var S=['Moratorium cohort: principal paused, interest tracked. Seasoning explainer attached.','EMI starts: cohort performance published by vintage.','Seasoned: lender path to 2030 with funding tenor stated.'];function go(i,b){document.querySelectorAll('.steps button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('st').textContent=S[i]}</script></main></body></html>
