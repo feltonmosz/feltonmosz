@@ -19,6 +19,9 @@ main{max-width:640px;margin:0 auto;padding:22px 16px 70px}
 .card .vis img{width:96px;height:96px;object-fit:contain}
 .ably .txt{background:#14213d}.budi .txt{background:#3b0764}.tang .txt{background:#14532d}
 .note{font-family:'Segoe UI',sans-serif;font-size:12px;color:#6b7280;text-align:center;margin-top:18px;line-height:1.6}
+.paywrap{text-align:center;margin:20px 0 4px}
+.paybtn{display:inline-block;background:#14532d;color:#fff;text-decoration:none;font-family:'Segoe UI',sans-serif;font-weight:800;letter-spacing:.4px;border-radius:999px;padding:16px 28px;box-shadow:0 8px 22px rgba(20,83,45,.24)}
+.paybtn:active{transform:translateY(1px)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#14213d;color:#faf7f2;padding:12px 20px;border-radius:999px;font-family:'Segoe UI',sans-serif;font-size:14px;display:none}
 </style></head><body>
 <div class='topbar'><span class='lang'>CUSTOMER EVIDENCE</span><span class='zone'>PAY IF USEFUL</span></div>
@@ -29,6 +32,7 @@ main{max-width:640px;margin:0 auto;padding:22px 16px 70px}
 <section class='card budi' onclick='toast("Budibase")'><div class='txt'><h2>Budibase</h2><p>12 Retool switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/budibase.png' alt='Budibase logo'></div></section>
 <section class='card tang' onclick='toast("Tangem")'><div class='txt'><h2>Tangem</h2><p>12 Ledger switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/tangem.png' alt='Tangem logo'></div></section>
 <p class='note'>Evidence from public sources only. Nothing to pay until a set earns it.</p>
+<div class='paywrap'><a class='paybtn' href='https://paypal.me/abdulhalimkhaddam' target='_blank' rel='noopener' aria-label='Pay via PayPal if the research was useful'>It earned it — pay US$99</a></div>
 </main>
 <div class='toast' id='t'></div>
 <script>function toast(c){var t=document.getElementById('t');t.textContent=c+': case build queued.';t.style.display='block';setTimeout(function(){t.style.display='none'},1800)}</script>
