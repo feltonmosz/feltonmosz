@@ -1,44 +1,35 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Pay-if-Useful Set</title>
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Pay-if-Useful Set — Independent Customer-Evidence Researcher</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:'Segoe UI',sans-serif;background:#5c0a2e;color:#fff}
-.topbar{background:#00001e;display:flex;align-items:center;gap:14px;padding:12px 16px}
-.topbar .lang{font-weight:700;letter-spacing:1px;font-size:14px}
-.topbar .zone{background:#7cfc00;color:#00001e;font-weight:800;border-radius:999px;padding:7px 16px;font-size:13px;letter-spacing:1px;margin-left:auto}
-.topbar .search{width:22px;height:22px;border:3px solid #fff;border-radius:50%;position:relative}
-.topbar .search::after{content:'';position:absolute;width:9px;height:3px;background:#fff;transform:rotate(45deg);right:-8px;bottom:-3px}
-.strip{background:#7cfc00;display:flex;justify-content:center;gap:18px;padding:10px 0}
-.strip .ic{width:44px;height:44px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#333;font-weight:800;font-size:17px}
-.logobar{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
-.logobar .mark{display:flex;align-items:center;gap:10px;color:#12351f}
-.logobar .ball{width:44px;height:44px;border-radius:50%;background:#7cfc00;display:flex;align-items:center;justify-content:center;font-weight:900;color:#12351f;font-size:20px}
-.logobar .name{font-size:21px;font-weight:800;line-height:1.05}
-.burger{display:flex;flex-direction:column;gap:6px}.burger span{width:30px;height:3px;background:#12351f}
-main{max-width:640px;margin:0 auto;padding:20px 16px 90px}
-.pill{display:inline-block;background:#7cfc00;color:#1a1a1a;font-weight:700;border-radius:999px;padding:11px 22px;margin:14px 0;font-size:15px;border:none;cursor:pointer}
-.card{border-radius:22px;overflow:hidden;margin:8px 0 4px;display:flex;min-height:210px}
-.card .txt{flex:0 0 46%;padding:22px 18px;clip-path:polygon(0 0,100% 0,62% 100%,0 100%);color:#fff}
-.card .txt h2{margin:0;font-size:21px;line-height:1.25}
-.card .txt p{font-size:13px;line-height:1.5;opacity:.9}
-.card .vis{flex:1;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900}
-.ably .txt{background:#00001e}.ably .vis{background:#ff5c39;color:#fff}
-.budi .txt{background:#ff6b35}.budi .vis{background:#1e1b4b;color:#fff}
-.tang .txt{background:#12351f}.tang .vis{background:#f59e0b;color:#fff}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#00001e;color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;display:none}
-.top{position:fixed;right:16px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#7cfc00;color:#1a1a1a;font-size:24px;font-weight:900;border:none;cursor:pointer}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:#faf7f2;color:#14213d}
+.topbar{background:#14213d;color:#faf7f2;display:flex;align-items:center;gap:14px;padding:13px 18px;font-family:'Segoe UI',sans-serif}
+.topbar .lang{font-size:12px;letter-spacing:2px;font-weight:600}
+.topbar .zone{background:#c9a227;color:#14213d;font-weight:800;border-radius:999px;padding:6px 14px;font-size:12px;letter-spacing:1px;margin-left:auto}
+.logobar{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:3px double #14213d}
+.logobar .name{font-size:20px;font-weight:700;line-height:1.15}
+.logobar .sub{font-family:'Segoe UI',sans-serif;font-size:11px;letter-spacing:2px;color:#6b7280;text-transform:uppercase}
+main{max-width:640px;margin:0 auto;padding:22px 16px 70px}
+.lede{font-size:17px;line-height:1.6;margin:4px 0 20px}
+.lede b{color:#14532d}
+.card{border-radius:18px;overflow:hidden;margin:14px 0;display:flex;min-height:190px;cursor:pointer;box-shadow:0 2px 10px rgba(20,33,61,.10)}
+.card .txt{flex:0 0 52%;padding:22px 20px;clip-path:polygon(0 0,100% 0,74% 100%,0 100%);color:#faf7f2}
+.card .txt h2{margin:0 0 8px;font-size:22px}
+.card .txt p{font-family:'Segoe UI',sans-serif;font-size:13px;line-height:1.55;margin:0;opacity:.92}
+.card .txt .price{font-family:'Segoe UI',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;margin-top:12px;color:#f5d76e}
+.card .vis{flex:1;display:flex;align-items:center;justify-content:center;background:#fff}
+.card .vis img{width:96px;height:96px;object-fit:contain}
+.ably .txt{background:#14213d}.budi .txt{background:#3b0764}.tang .txt{background:#14532d}
+.note{font-family:'Segoe UI',sans-serif;font-size:12px;color:#6b7280;text-align:center;margin-top:18px;line-height:1.6}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#14213d;color:#faf7f2;padding:12px 20px;border-radius:999px;font-family:'Segoe UI',sans-serif;font-size:14px;display:none}
 </style></head><body>
-<div class='topbar'><span class='lang'>PAY-IF-USEFUL ▾</span><span class='zone'>3 SETS</span><span class='search'></span></div>
-<div class='strip'><span class='ic'>$99</span><span class='ic'>7d</span><span class='ic'>✓</span></div>
-<div class='logobar'><div class='mark'><span class='ball'>P</span><span class='name'>Pay-if-<br>Useful</span></div><div class='burger'><span></span><span></span></div></div>
+<div class='topbar'><span class='lang'>CUSTOMER EVIDENCE</span><span class='zone'>PAY IF USEFUL</span></div>
+<div class='logobar'><div><div class='name'>Independent Customer-Evidence Researcher</div><div class='sub'>Public evidence · Ranked fix lists</div></div></div>
 <main>
-<button class='pill' onclick='toast()'>Use it for a week</button>
-<section class='card ably'><div class='txt'><h2>Ably</h2><p>12 Pusher &amp; PubNub switchers. Pricing teardown. Deliverability audit.</p></div><div class='vis'>A</div></section>
-<button class='pill' onclick='toast()'>Open the set</button>
-<section class='card budi'><div class='txt'><h2>Budibase</h2><p>12 Retool switchers. Pricing teardown. Deliverability audit.</p></div><div class='vis'>B</div></section>
-<button class='pill' onclick='toast()'>Open the set</button>
-<section class='card tang'><div class='txt'><h2>Tangem</h2><p>12 Ledger switchers. Pricing teardown. Deliverability audit.</p></div><div class='vis'>T</div></section>
-<button class='pill' onclick='toast()'>Open the set</button>
+<p class='lede'>Three research sets, sent in full. Use one for a week — <b>pay only if it was useful.</b> Each set: the rival's angry customers as a lead list, a pricing-page teardown, and a cold-email deliverability audit.</p>
+<section class='card ably' onclick='toast("Ably")'><div class='txt'><h2>Ably</h2><p>12 Pusher &amp; PubNub switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/ably.png' alt='Ably logo'></div></section>
+<section class='card budi' onclick='toast("Budibase")'><div class='txt'><h2>Budibase</h2><p>12 Retool switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/budibase.png' alt='Budibase logo'></div></section>
+<section class='card tang' onclick='toast("Tangem")'><div class='txt'><h2>Tangem</h2><p>12 Ledger switchers, verbatim. Pricing teardown. Deliverability audit.</p><div class='price'>US$99 · PAY IF USEFUL</div></div><div class='vis'><img src='logos/tangem.png' alt='Tangem logo'></div></section>
+<p class='note'>Evidence from public sources only. Nothing to pay until a set earns it.</p>
 </main>
-<div class='toast' id='t'>Case build queued.</div>
-<button class='top' onclick='window.scrollTo({top:0,behavior:"smooth"})'>∧</button>
-<script>function toast(){var t=document.getElementById('t');t.style.display='block';setTimeout(function(){t.style.display='none'},1800)}</script>
+<div class='toast' id='t'></div>
+<script>function toast(c){var t=document.getElementById('t');t.textContent=c+': case build queued.';t.style.display='block';setTimeout(function(){t.style.display='none'},1800)}</script>
 </body></html>
